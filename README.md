@@ -50,3 +50,15 @@ Bu repo'daki Jupyter notebooklarını açtığınız zaman 'Kernel' menüsünden
 
 
 This project is licensed under the terms of the MIT license.
+
+## İçerik
+
+Bu reponun planlanan içeriği aşağıdaki gibidir:
+
+- Doğrusal Regresyon
+- Multi-layer Perceptron
+- Convolutional Neural Networks
+- Recurrent Neural Networks
+- Autoencoders
+- Reinforcement Learning
+
