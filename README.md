@@ -18,13 +18,30 @@ source activate tensorflow
 
 - Paketleri yükleme (Tensorflow, Numpy'ı otomatik yüklediği için onu açıkça yüklemeye gerek yok):
 ```shell
-pip install --upgrade tensorflow # Eğer tensorflow gpu yüklemek istiyorsanız tensorflow yerine tensorflow-gpu yazın. MacOS'ta GPU support yok.
+# Eğer tensorflow gpu yüklemek istiyorsanız tensorflow yerine tensorflow-gpu yazın. MacOS'ta GPU support yok.
+pip install --upgrade tensorflow 
+
 conda install pandas
 conda install scikit-learn
 conda install pillow
 conda install scikit-image
+
+#Jupyter notebookları tensorflow sanal ortamında çalıştırmak için gerekli
 pip install ipykernel
-python -m ipykernel install --user --name tensorflow --display-name "TF" #Jupyter notebookları tensorflow sanal ortamında çalıştırmak için gerekli
+python -m ipykernel install --user --name tensorflow --display-name "TF" 
+
+# Sanal ortamı kapatmak için
+source deactivate tensorflow
+```
+
+- Jupyter Notebook çalıştırma:
+```shell
+# Sanal ortamı aktive ediyoruz
+source activate tensorflow
+
+# Notebookları oluşturacağımız veya notebookların bulunduğu klasör
+cd /path/to/notebooks
+jupyter notebook # Kernel'ı değiştirmeyi unutmayın
 ```
 
 Tensorflow-GPU Nvidia GPUlarla çalışmak üzerine tasarlandı. GPU desteğini aktifleştirmek için Tensorflow [dökümanında](https://www.tensorflow.org/install/) belirtildiği versiyonlarıyla CUDA ve cuDNN yüklemek gerekebilir. Lütfen GPU desteğiyle kurulum yapmak için dökümanı takip edin. Kendi işletim sisteminiz için olan komutları uygulayın.
